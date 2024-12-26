@@ -1,1 +1,1 @@
-This is my first website which is a portfolio website inspired by Abhisek Jha's 2024 Portfolio.  Mainly made this to learn new stuff.
+This is my first website which is a portfolio website inspired by Abhishek Jha's 2024 Portfolio.  Mainly made this to learn new stuff.
