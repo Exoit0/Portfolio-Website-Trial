@@ -1,0 +1,823 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: bold;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+}
+
+#loader{
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color:hsla(120,0%,8%,1);
+    background-image:
+    radial-gradient(at 87% 0%, hsla(0,0%,10%,1) 0px, transparent 50%),
+    radial-gradient(at 6% 100%, hsla(0,0%,9%,1) 0px, transparent 50%);
+    color: #F5F5F5;
+    z-index: 9999;
+}
+
+/* HTML: <div class="loader"></div> */
+#loading {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    width: 9px;
+    opacity: 0.6;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 2s linear alternate;
+  }
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 #F5F5F5, -20px 0 #f5f5f5c7;background: #F5F5F5 }
+      33% {box-shadow: 20px 0 #F5F5F5, -20px 0 #f5f5f5c7;background: #f5f5f5c7}
+      66% {box-shadow: 20px 0 #f5f5f5c7,-20px 0 #F5F5F5; background: #f5f5f5c7}
+      100%{box-shadow: 20px 0 #F5F5F5,-20px 0 #F5F5F5; background: #F5F5F5 }
+  }
+
+#green{
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 0vh;
+    background-color:hsla(180,100%,25%,1);
+    background-image:
+    radial-gradient(at 92% 0%, hsla(0,1%,62%,0.43) 0px, transparent 50%),
+    radial-gradient(at 6% 100%, hsla(0,1%,62%,0.42) 0px, transparent 50%);
+    z-index: 999;
+}
+
+
+#loader #topheading{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#topheading h4{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size:11px;
+    opacity: 0.6;
+}
+
+#loader h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+    font-weight: 470;
+}
+
+#txtstyle{
+    color: #039191;
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.reveal .parent{
+    /* basically makes a hideable box */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.reveal .parent .child{
+    display: block;
+}
+
+.parent .child span{
+    display: inline-block;
+}
+
+#home{
+    width: 100%;
+    height: 150vh;
+    background-color:hsla(120,0%,8%,1);
+    background-image:
+    radial-gradient(at 92% 96%, hsla(0,0%,9%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(0,0%,10%,1) 0px, transparent 50%);
+  }
+
+
+  #home #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 5vw 0vw 5vw;
+    width: 100%;
+    height: 100px;
+  }
+
+  #nav a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 470;
+    opacity: 0.9;
+    font-size: 12px;
+    color:#F5F5F5; 
+  }
+
+  #nav a .line{
+    position: absolute;
+    bottom: -10%;
+    display: inline-block;
+    height: 1.28px;
+    opacity: 0.9;
+    background-color: #F5F5F5;
+
+  }
+
+  #line1{
+    left: 0;
+    width: 0%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+  }
+
+  #line2{
+    right: 0;
+    width: 100%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+
+  #nav a:hover #line1{
+    width: 100%;
+  }
+
+  #nav a:hover #line2{
+    width: 0%;
+  }
+
+/* now the text on the first row */
+
+.row{
+    line-height: 1.15;
+    margin-top: 1.5vw; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    padding: 0 6vw;
+    padding-right: 12vw;
+}
+
+/* CREATIVE and DESIGNER */
+.row h1{
+    padding-bottom: 5px;
+    font-size: 12vw;
+    font-weight: 450;
+    color: #F5F5F5;
+    opacity: 0.9;
+}
+
+/* the texts on the side */
+.row .text{
+    margin-top: 0vw;
+    line-height: 14px;
+}
+
+.row h5{
+    color: #ffffff;
+    opacity: 0.25;
+    font-size: 12px;
+    font-weight: 450;
+}
+
+.row:nth-child(3){
+    margin-top: 0;
+}
+
+
+/* the special FOR letter */
+
+.row .text #sexyword{
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-size: 13px;
+    font-style: normal;
+}
+
+
+/* adding the dropdown icon */
+
+.row .ri-corner-left-down-fill{
+    padding-top: 40px;
+    font-size: 30px;
+    color: #F5F5F5;
+    opacity: 0.9;
+}
+
+.row svg{
+    height: 125px;
+    margin: 0 4vw;
+}
+
+
+path , polyline{
+    stroke: #039191;
+} 
+
+#imagery{
+    background-color:hsla(120,0%,8%,1);
+    background-image:
+    radial-gradient(at 87% 0%, hsla(0,0%,10%,1) 0px, transparent 50%),
+    radial-gradient(at 6% 100%, hsla(0,0%,9%,1) 0px, transparent 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15vw;
+    width: 100%;
+    padding: 1vw 7vw;
+}
+
+#imagery #imglef{
+    width:30%;
+    height: auto;
+}
+
+#imglef h1 {
+     line-height: 1;
+     font-weight: 500;
+     letter-spacing: 0.4;
+     font-size: 2vw;
+     color: #F5F5F5;
+     opacity: 0.9;
+ }
+
+ #imgtxtstyle{
+    font-size: 40px;
+    color: #039191;
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#imgrig{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+    height: 300px;
+    z-index: 99;
+}
+
+#imgrig .imgcntnr{
+    position: absolute;
+    width: 30vw;
+    height: 40vw;
+    border-radius: 1vw;
+    filter: grayscale();
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+#imgrig .imgcntnr:hover{
+    width: 33vw;
+    height: 43vw;
+    filter: grayscale(0);
+}
+
+#imgrig .imgcntnr:nth-child(1) {
+    transform: translate(-60%, -8%) rotate(-10deg);
+    background-image: url(./Images/Akiran\ Poster.jpg);
+    background-size: 96%;
+    background-position: center;
+  }
+  
+  #imgrig .imgcntnr:nth-child(2) {
+    transform: translate(-19%, -2%) rotate(-3deg);
+    background-image: url(./Images/Paranoia\ Poster.png);
+    background-size:96%;
+    background-position: center;
+  }
+  
+  #imgrig .imgcntnr:nth-child(3) {
+    transform: translate(20%, 10%) rotate(3deg);
+    background-image: url(./Images/Blessing\ Poster.png);
+    background-size: 100%;
+    background-position: center;
+  }
+
+
+#work{
+    padding-top: 150px;
+    position: relative;
+    width: 100%;    
+    min-height: 70vh;
+    background-color:hsla(120,0%,8%,1);
+    background-image:
+    radial-gradient(at 92% 96%, hsla(0,0%,9%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(0,0%,10%,1) 0px, transparent 50%);
+}
+
+/* #work::before{
+    content: "";
+    top: -70px;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    transform: rotate(-180deg);
+    background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+    background-size: cover;
+} */
+
+#work .workrow{
+    padding: 0 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workrow h1{
+    display: flex;
+    align-items: center;
+    font-size: 8vw;
+    font-weight: 500;
+    color: #F5F5F5;
+    opacity: 0.9;
+}
+
+#worktxtstyle{
+    padding-bottom: 5px;
+    font-size: 12vw;
+    color: #039191;
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#workgstyle{
+    padding-bottom: 5px;
+    font-size: 4vw;
+    color: #039191;
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang{
+    font-size: 2vw;
+    padding-left: 4vw;
+    line-height: 4vw;
+    opacity: 0.9;
+    color: #Ffffff;
+}
+
+.o-ui-arrow{
+    width: 5vw;
+    transform: rotate(90deg);
+}
+
+.o-ui-arrow path{
+    stroke: rgb(158, 158, 158);
+
+}
+
+.workrow h1 .mini{
+    font-size: 2vw;
+    margin-left: 3vw;
+    font-weight: 500;
+
+}
+
+#images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 2vw;
+    width: 100%;
+    padding: 0 2vw;
+}
+
+.cnt{
+    padding-top: -20px;
+    filter: grayscale(1);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.cnt img{
+    position: absolute;
+    background-size: contain;
+    width: 100%;
+}
+
+.cnt1{
+    rotate: -90deg;
+    width: 24vw;
+    height: 40vw;
+    background-size: 100%;
+    background-position: center;
+}
+
+.cnt:hover{
+    filter: grayscale(0);
+    rotate: -90deg;
+    width: 28vw;
+    height: 44vw;
+}
+
+#end{
+    background-color:hsla(180,0%,8%,1);
+    background-image:
+    radial-gradient(at 92% 0%, hsla(0,1%,62%,0) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(0,0%,10%,1) 0px, transparent 50%);
+}
+
+#end h4{
+    size: 30px;
+    padding: 1.5vw 2vw;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: bold;
+    color: #F5F5F5;
+    opacity: 0.5;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: HSLA(180,0%,8%,1);
+    opacity: 0.7;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #039191;
+    border-radius: 100vw;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #039191;
+  }
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: bold;
+} */
+
+/* for the page movement */
+/* #fs{ */
+    /* display: none; */
+    /* width: 100%;
+    height: 100vh;
+    background-color:#161616;
+    color: #F5F5F5;
+    z-index: 9999;
+}
+
+#fs #topheading{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#topheading h4{
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size:11px;
+    opacity: 0.6;
+}
+
+#fs h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+    font-weight: 470;
+}
+
+#txtstyle{
+    color: #00A3A3;
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#elem{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    background-color:#008080;
+}
+
+#richbl{
+    width: 100%;
+    position: absolute;
+    height:0;
+    bottom: 0;
+    background-color:#161616;
+} */
+
+/* for the text on the home page */
+
+/* .reveal .parent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.reveal .parent .child{
+    display: block;
+}
+
+.parent .child span{
+    display: inline-block;
+}
+
+.loader{
+    opacity: 0.7;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 35px;
+    height: 35px;
+    animation: spin 2s linear infinite;
+  }
+
+  svg path, svg rect{
+    fill: #161616;
+  } */
+  
+/* making the home page */
+  /* #home{
+    width: 100%;
+    height: 100%;
+    background-color: #c93204;
+  } */
+
+  /* the elements written at the top & animation underline */
+  /* #home #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw 5vw 7vw 5vw;
+    width: 100%;
+    height: 100px;
+  }
+
+  #nav a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 370;
+    opacity: 0.9;
+    font-size: 11.5px;
+    color: #F5F5F5; 
+  }
+
+  #nav a .line{
+    position: absolute;
+    bottom: -10%;
+    display: inline-block;
+    height: 1.1px;
+    opacity: 0.9;
+    background-color: #F5F5F5;
+
+  }
+
+  #line1{
+    left: 0;
+    width: 0%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+  }
+
+  #line2{
+    right: 0;
+    width: 100%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+
+  #nav a:hover #line1{
+    width: 100%;
+  }
+
+  #nav a:hover #line2{
+    width: 0%;
+  } */
+
+
+/* now the text on the first row */
+
+/* .row{
+    line-height: 1;
+    margin-top: 0vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5vw;
+    padding-right: 12vw;
+} */
+
+/* CREATIVE and DESIGNER */
+/* .row h1{
+    font-weight: 500;
+    font-size: 13vw;
+    color: #e0e0e0;
+} */
+
+/* the texts on the side */
+/* .row .text{
+    margin-top: 2.5vw;
+    line-height: 14px;
+}
+
+.row h5{
+    color: #ffffff;
+    opacity: 0.25;
+    font-size: 12px;
+    font-weight: 450;
+} */
+
+/* the special FOR letter */
+/* 
+.row .text #sexyword{
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-size: 13px;
+    font-style: normal;
+} */
+
+/* adding the dropdown icon */
+
+/* .row .ri-corner-left-down-fill{
+    padding-top: 80px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.row svg{
+    height: 125px;
+    margin: 1.6vw 3vw 0 3.3vw;
+}
+
+path , polyline{
+    stroke: #00A3A3;
+} */
+
+
+/* #cursor{
+    position: fixed;
+    width: 17vw;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#cursor>div{
+    opacity: 0;
+    position: absolute;
+}
+
+#elem{
+    width: 100%;
+    position: relative;
+}
+
+#cursor .crow{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: .7vw;
+}
+
+.crow .ccircle{
+    width: 2vw;
+    height: 2vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+
+.crow .ccapsule{
+    padding: .7vw 3vw;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+#elem img{
+    width: 100%;
+    opacity: 0;
+    animation: an 4s linear infinite;
+    position: absolute;
+}
+
+#elem img:nth-child(2){
+    animation-delay: 1s;
+}
+
+#elem img:nth-child(3){
+    animation-delay: 2s;
+}
+
+#elem img:nth-child(4){
+    animation-delay: 3s;
+}
+
+#elem img:nth-child(5){
+    animation-delay: 4s;
+}
+
+@keyframes an{
+    0%{
+        opacity: 1;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    21%{
+        opacity: 0;
+    }
+
+    40%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    80%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+} */
